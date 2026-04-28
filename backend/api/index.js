@@ -15,12 +15,6 @@ function loadBooks() {
   return JSON.parse(data);
 }
 
-// Función para guardar libros en el archivo
-function saveBooks(books) {
-  fs.writeFileSync(DATA_FILE, JSON.stringify(books, null, 2));
-}
-
-
 // GET /books → obtener todos los libros
 app.get("/books", (req, res) => {
   const books = loadBooks();
