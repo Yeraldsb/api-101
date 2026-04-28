@@ -62,6 +62,7 @@ El camarero es el intermediario que comunica entre tú y la cocina, igual que un
 La URL donde se accede a la API:
 ```
 http://localhost:3000
+
 ```
 
 ### 2. **Metodo**
@@ -77,6 +78,10 @@ Authorization: Bearer token123
 ### 4. **Request Body**
 Datos recibidos del servidor:
 ```json
+{
+   "title": "1984",
+   "author": "George Orwell"
+}
 
 ```
 
@@ -92,11 +97,11 @@ Data received from the server:
 ```
 
 ### 6. **Status Code**
-Indicates success or failure (200, 404, 500, etc.)
+Indica éxito o fallo (200, 404, 500, etc.)
 
-## Example: Weather API
+## Ejemplo: Weather API
 
-Imagine you're building a weather app:
+Imagina que estás construyendo una app del clima:
 
 ```javascript
 // Request
@@ -110,66 +115,41 @@ GET https://api.weather.com/current?city=London
 }
 ```
 
-Your app doesn't need to know how the weather data is collected or stored. The API handles all that complexity!
+Tu app no necesita saber cómo se recopilan o almacenan los datos del clima.
+¡La API se encarga de toda esa complejidad!
 
-## REST API Characteristics
+## Características de una API REST
 
-REST (Representational State Transfer) APIs have specific characteristics:
+Las APIs REST (Representational State Transfer) tienen características específicas:
 
-1. **Client-Server Architecture** - Separated concerns
-2. **Stateless** - Each request is independent
-3. **Cacheable** - Responses can be cached
-4. **Uniform Interface** - Consistent structure
-5. **Layered System** - Can have multiple layers
+1. **Arquitectura Cliente-Servidor** – Separación de responsabilidades
+2. **Sin estado (Stateless)** – Cada petición es independiente
+3. **Cacheable** – Las respuestas pueden almacenarse en caché
+4. **Interfaz uniforme** – Estructura consistente
+5. **Sistema por capas** – Puede tener múltiples capas
 
-## JSON Format
 
-APIs commonly use JSON (JavaScript Object Notation) for data exchange:
+**¿Por qué JSON??**
+- Fácil de leer
+- Ligero
+- Compatible con todos los lenguajes
+- Fácil de interpretarse
 
-```json
-{
-  "user": {
-    "id": 1,
-    "name": "Alice",
-    "age": 25,
-    "isActive": true,
-    "hobbies": ["reading", "coding", "gaming"]
-  }
-}
-```
+## Casos de uso comunes
 
-**Why JSON?**
-- Human-readable
-- Lightweight
-- Supported by all programming languages
-- Easy to parse
+1. **Redes sociales** – Publicar, dar “me gusta”, comentar
+2. **Procesamiento de pagos** – Stripe, PayPal
+3. **Mapas** – Google Maps API
+4. **Autenticación** – OAuth, sistemas de login
+5. **Obtención de datos** – Noticias, clima, acciones
 
-## Common Use Cases
 
-1. **Social Media** - Posting, liking, commenting
-2. **Payment Processing** - Stripe, PayPal
-3. **Maps** - Google Maps API
-4. **Authentication** - OAuth, login systems
-5. **Data Retrieval** - News, weather, stocks
+## Próximos pasos
 
-## Our Learning API
-
-In this repository, we have a simple User Management API:
-
-- Create users
-- Read user data
-- Update user information
-- Delete users
-
-All without a database - just a JSON file!
-
-## Next Steps
-
-Now that you understand what an API is, let's learn about:
-- [HTTP Methods](02-http-methods.md) - How to interact with APIs
-- [Status Codes](03-status-codes.md) - Understanding responses
-- [REST Principles](04-rest-principles.md) - Best practices
-
+Ahora que entiendes qué es una API, aprendamos sobre:
+- [HTTP Methods](02-http-methods.md) -  Cómo interactuar con APIs
+- [Status Codes](03-status-codes.md) -  Cómo interpretar respuestas
+- [REST Principles](04-rest-principles.md) -  Buenas prácticas
 ---
 
-[← Back to README](../README.md) | [Next: HTTP Methods →](02-http-methods.md)
+[← Vuelta al README](../README.md) | [Siguiente: HTTP Methods →](02-http-methods.md)
